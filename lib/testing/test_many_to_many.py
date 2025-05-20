@@ -31,7 +31,7 @@ def test_contract_validates_author():
     royalties = 40000
 
     with pytest.raises(Exception):
-        Contract("Author", book, date, royalties)
+        Contract("not an author", book, date, royalties)
 
 def test_contract_validates_book():
     """Test Contract class validates book of type Book"""
